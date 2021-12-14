@@ -2,4 +2,4 @@ This is just a place to store my attempts of the [Advent of Code 2021](https://a
 
 Puzzles can be run using `npm start`:
 
-    npm start -- day01/part02.ts
+    npm start -- day01/part2.ts
