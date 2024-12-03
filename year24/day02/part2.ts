@@ -1,4 +1,5 @@
-import { readAllInput } from '../../utils'
+import { parseNumberList } from '../../utils/lists'
+import { readAllInput } from '../../utils/input'
 import { isSafe } from './part1'
 
 const ORDINAL = ['first', 'second', 'third', 'fourth', 'fifth']
@@ -6,7 +7,7 @@ const ORDINAL = ['first', 'second', 'third', 'fourth', 'fifth']
 readAllInput(reports => {
 
   const safe = reports
-    .map(line => line.split(' ').map(it => parseInt(it, 10)))
+    .map(parseNumberList)
     .filter(report => {
 
       if (isSafe(report)) {

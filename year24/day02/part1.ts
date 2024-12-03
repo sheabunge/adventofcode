@@ -1,4 +1,5 @@
-import { readAllInput } from '../../utils'
+import { parseNumberList } from '../../utils/lists'
+import { readAllInput } from '../../utils/input'
 
 export const isSafe = (report: number[]): boolean => {
   let isDecreasing = true
@@ -28,7 +29,7 @@ export const isSafe = (report: number[]): boolean => {
 readAllInput(reports => {
 
   const safe = reports
-    .map(line => line.split(' ').map(it => parseInt(it, 10)))
+    .map(parseNumberList)
     .filter(report => isSafe(report))
 
   console.log(`${safe.length} are safe`)

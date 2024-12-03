@@ -1,6 +1,6 @@
 // --- Day 3: Binary Diagnostic ---
 
-import { readAllInput } from '../../utils'
+import { readAllInput } from '../../utils/input'
 import { arrayColumn, invertBits, mostCommonBit } from './utils'
 
 const reduceToMostCommon = (report: string[]) =>

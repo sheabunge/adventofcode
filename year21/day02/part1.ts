@@ -1,4 +1,4 @@
-import { readInput } from '../../utils'
+import { readInput } from '../../utils/input'
 
 let depth = 0
 let position = 0

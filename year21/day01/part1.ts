@@ -1,4 +1,4 @@
-import { readAllInput } from '../../utils'
+import { readAllInput } from '../../utils/input'
 
 readAllInput(lines => {
   let [prev, ...depths] = lines.map(Number)

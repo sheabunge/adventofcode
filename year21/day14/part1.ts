@@ -1,4 +1,4 @@
-import { readAllInput } from '../../utils'
+import { readAllInput } from '../../utils/input'
 
 const STEPS = 40
 const DEBUG = false

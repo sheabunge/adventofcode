@@ -3,7 +3,7 @@ import { createReadStream } from 'fs'
 import { dirname, resolve } from 'path'
 import { argv } from 'process'
 
-const USE_EXAMPLE = true
+const USE_EXAMPLE = false
 
 export const readInput = (each: (line: string) => void, final?: () => void) => {
   createInterface({
