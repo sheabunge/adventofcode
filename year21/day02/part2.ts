@@ -1,4 +1,4 @@
-import { readInput } from '../utils'
+import { readInput } from '../../utils'
 
 let depth = 0
 let position = 0
@@ -26,4 +26,3 @@ readInput(
     console.log(depth * position)
   }
 )
-

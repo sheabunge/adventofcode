@@ -1,4 +1,4 @@
-import { readAllInput } from '../utils'
+import { readAllInput } from '../../utils'
 
 readAllInput(lines => {
   let increaseCount = 0
