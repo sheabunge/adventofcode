@@ -1,11 +1,12 @@
 export type BinaryDigit = '0' | '1'
 
-export type BinaryWord = ArrayLike<BinaryDigit>
+export type BinaryWord = BinaryDigit[]
 
-export const invertBit = (bit: BinaryDigit) => bit === '0' ? '1' : '0'
+export const invertBit = (bit: BinaryDigit): BinaryDigit =>
+  bit === '0' ? '1' : '0'
 
-export const invertBits = (bits: BinaryWord) => Array.from(bits).map(invertBit).join('')
+export const invertBits = (bits: BinaryWord): BinaryWord =>
+  Array.from(bits).map(invertBit)
 
-export const arrayColumn = <U>(list: Array<ArrayLike<U>>, index: number) => list.map(row => row[index])
-
-export const mostCommonBit = (bits: string[]) => bits.filter(bit => bit === '0').length > bits.length / 2 ? '0' : '1'
+export const mostCommonBit = (bits: string[]): BinaryDigit =>
+  bits.filter(bit => bit === '0').length > bits.length / 2 ? '0' : '1'

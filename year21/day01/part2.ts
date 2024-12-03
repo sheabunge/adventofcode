@@ -13,7 +13,7 @@ readAllInput(lines => {
     const current = calcWindow(i)
     const previous = calcWindow(i - 1)
 
-    console.log(current, current > previous ? '(increased) *' : (current < previous ? '(decreased)' : '(no change)'))
+    console.log(current, current > previous ? '(increased) *' : current < previous ? '(decreased)' : '(no change)')
 
     if (current > previous) {
       increaseCount++

@@ -1,14 +1,16 @@
 // --- Day 3: Binary Diagnostic ---
 
 import { readAllInput } from '../../utils/input'
-import { arrayColumn, invertBits, mostCommonBit } from './utils'
+import { arrayColumn } from '../../utils/lists'
+import { invertBits, mostCommonBit } from './utils'
+import type { BinaryDigit } from './utils'
 
-const reduceToMostCommon = (report: string[]) =>
-  Array.from(report[0]).map((_, index) => mostCommonBit(arrayColumn(report, index))).join('')
+const reduceToMostCommon = (report: string[]): BinaryDigit[] =>
+  Array.from(report[0]).map((_, index) => mostCommonBit(arrayColumn(report, index)))
 
 readAllInput(report => {
   const gamma = reduceToMostCommon(report)
   const epsilon = invertBits(gamma)
-  const powerConsumption = parseInt(gamma, 2) * parseInt(epsilon, 2)
+  const powerConsumption = parseInt(gamma.join(''), 2) * parseInt(epsilon.join(''), 2)
   console.log(powerConsumption)
 })

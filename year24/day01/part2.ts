@@ -12,8 +12,8 @@ readAllInput(lines => {
     rightList.push(location2)
   }
 
-  for (let i = 0; i < leftList.length; i++) {
-    similarity.push(leftList[i] * rightList.filter(number => number === leftList[i]).length)
+  for (const item of leftList) {
+    similarity.push(item * rightList.filter(number => number === item).length)
   }
 
   console.log(`total similarity score is ${sumOf(similarity)}`)

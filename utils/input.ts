@@ -2,8 +2,7 @@ import { createInterface } from 'readline'
 import { createReadStream } from 'fs'
 import { dirname, resolve } from 'path'
 import { argv } from 'process'
-
-const USE_EXAMPLE = false
+import { USE_EXAMPLE } from '../constants'
 
 export const readInput = (each: (line: string) => void, final?: () => void) => {
   createInterface({

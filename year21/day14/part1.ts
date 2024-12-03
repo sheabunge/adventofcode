@@ -1,9 +1,9 @@
+import { DEBUG } from '../../constants'
 import { readAllInput } from '../../utils/input'
 
 const STEPS = 40
-const DEBUG = false
 
-const countElements = <T>(items: Array<T>) => {
+const countElements = <T>(items: T[]) => {
   const counts = new Map<T, number>()
 
   items.forEach(item => {
@@ -17,7 +17,7 @@ readAllInput(lines => {
   const [template, _, ...ruleStrings] = lines
   console.log(`Template:\t\t${template}`)
 
-  const rules = new Map(ruleStrings.map(rule => rule.split(' -> ', 2) as [string, string]))
+  const rules = new Map(ruleStrings.map(rule => <[string, string]> rule.split(' -> ', 2)))
   let pairs = template
 
   for (let step = 1; step <= STEPS; step++) {

@@ -1,15 +1,24 @@
 {
-  "name": "@sheabunge/adventofcode2021",
+  "name": "@sheabunge/adventofcode",
   "version": "1.0.0",
-  "description": "My Advent of Code 2021 attempts",
+  "description": "My Advent of Code attempts",
   "scripts": {
-    "start": "ts-node"
+    "start": "ts-node",
+    "test": "eslint"
   },
   "author": "Shea Bunge <shea@sheabunge.com>",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/compat": "^1.2.3",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.16.0",
+    "@stylistic/eslint-plugin": "^2.11.0",
     "@types/node": "^16.11.12",
+    "eslint": "^9.16.0",
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^15.13.0",
     "ts-node": "^10.4.0",
-    "typescript": "^4.5.4"
+    "typescript": "^4.9.5",
+    "typescript-eslint": "^8.17.0"
   }
 }

@@ -5,11 +5,9 @@ import { isSafe } from './part1'
 const ORDINAL = ['first', 'second', 'third', 'fourth', 'fifth']
 
 readAllInput(reports => {
-
   const safe = reports
     .map(parseNumberList)
     .filter(report => {
-
       if (isSafe(report)) {
         console.log(report.join(' '), '\tSafe without removing any level.')
         return true

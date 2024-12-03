@@ -18,7 +18,7 @@ export const isSafe = (report: number[]): boolean => {
 
     const difference = Math.abs(first - second)
 
-    if ((!isIncreasing && !isDecreasing) || difference < 1 || difference > 3) {
+    if (!isIncreasing && !isDecreasing || difference < 1 || difference > 3) {
       return false
     }
   }
@@ -27,7 +27,6 @@ export const isSafe = (report: number[]): boolean => {
 }
 
 readAllInput(reports => {
-
   const safe = reports
     .map(parseNumberList)
     .filter(report => isSafe(report))
